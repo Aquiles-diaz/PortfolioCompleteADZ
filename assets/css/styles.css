@@ -8,7 +8,7 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 89%, 60%);
+  --first-color: hsl(var(--hue-color), 99%, 30%);
   --second-color: hsl(var(--hue-color), 56%, 12%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
@@ -247,7 +247,7 @@ img {
 }
 .about__img img {
   width: 200px;
-  border-radius: 0.5rem;
+  border-radius: 1.5rem;
 }
 
 /* ===== SKILLS =====*/
@@ -299,9 +299,10 @@ img {
 .skills__js {
   width: 65%;
 }
-.skills__ux {
-  width: 85%;
+.skills__python {
+  width: 100%;
 }
+
 .skills__img {
   border-radius: 0.5rem;
 }
