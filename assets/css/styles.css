@@ -8,8 +8,8 @@
   /*Purple 260 - Red 355 - Blue 224 - Pink 340*/
   /* HSL color mode */
   --hue-color: 224;
-  --first-color: hsl(var(--hue-color), 99%, 30%);
-  --second-color: hsl(var(--hue-color), 56%, 12%);
+  --first-color: #1aff00; /* Código hexadecimal para negro */
+  --second-color: hsl(var(--hue-color), 16%, 12%);
   /*===== Fuente y tipografia =====*/
   --body-font: "Poppins", sans-serif;
   --big-font-size: 2rem;
@@ -130,7 +130,7 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
+    background-color: var(--first-color);
     transition: 0.5s;
   }
 }
@@ -220,7 +220,13 @@ img {
   width: 360px;
 }
 
-/*BUTTONS*/
+.button-wrapper {
+  display: flex;
+  gap: 5px;
+  align-items: center;
+}
+
+/* BUTTONS */
 .button {
   display: inline-block;
   background-color: var(--first-color);
@@ -232,6 +238,78 @@ img {
 }
 .button:hover {
   box-shadow: 0px 10px 36px rgba(0, 0, 0, 0.15);
+}
+
+/* From Uiverse.io by barisdogansutcu */
+.download-button {
+  position: relative;
+  border-width: 0;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.download-button .docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 5px;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 5px;
+  z-index: 1;
+  background-color: var(--first-color); 
+  border: solid 1px #ffffff;
+  transition: all 0.5s cubic-bezier(0.77, 0, 1.175, 1);
+}
+
+.download-button:hover {
+  box-shadow:
+    rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px,
+    rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px,
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: #ffffff;
+  border: solid 1px #000000;
+  transition: all .8s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+  transform: translateY(100%);
+}
+
+.download svg polyline,
+.download svg line {
+  animation: docs 1s infinite;
+}
+
+@keyframes docs {
+  0% {
+    transform: translateY(0%);
+  }
+  50% {
+    transform: translateY(-15%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
 }
 
 /* ===== ABOUT =====*/
@@ -345,7 +423,7 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
+  background-color: var(--first-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
